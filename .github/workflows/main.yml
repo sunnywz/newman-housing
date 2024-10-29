@@ -1,0 +1,28 @@
+name: Deploy Newman Housing Theme to WP Engine
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Setup SSH for WP Engine deployments
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
+
+      # Step 3: Deploy Newman Housing child theme
+      - name: Deploy to Newman Housing
+        uses: wpengine/github-action-wpe-site-deploy@v3
+        with:
+          WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
+          WPE_ENV: newmanhousing
+          REMOTE_PATH: "wp-content/themes/newman-housing/"
