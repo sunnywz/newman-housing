@@ -1,7 +1,7 @@
 <div class="mobile-utility-container">
     <ul class="utility-navigation">
-        <li class="current-site">
-            <a href="https://newmanministry.com/">
+        <li>
+            <a href="https://newmanministry.com/" class="">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/ministry-logo-white-min.png" alt="Newman Ministry" class="full-white-logo" />
             </a>
         </li>
@@ -10,7 +10,7 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/connection-logo-white-min.png" alt="Newman Connection" class="full-white-logo" />
             </a>
         </li>
-        <li>
+        <li class="current-site">
             <a href="https://housing.newmanministry.com/" class="">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/housing-logo-white-min.png" alt="Newman Housing" class="full-white-logo" />
             </a>
