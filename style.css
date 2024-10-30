@@ -6,3 +6,162 @@
  Template: newman-base
  Version: 1.0.0
 */
+
+/* Colors
+--------------------------------------------- */
+:root {
+	/* Newman Base Core Colors */
+	--base-purple: #33106A;
+	--base-teal: #00A19A;
+	--base-aqua: #65DAD2;
+
+    --orange-pale: #FFF1E5;
+    --orange-light: #FFBC63;
+    --orange-medium: #FFA138;
+    --orange-dark: #E5872E;
+
+    --housing-lilac: #EBEBF7;
+    --housing-violet: #6114DB;
+    --housing-purple: #4C189E;
+}
+
+/* Link and Button Overrides
+--------------------------------------------- */
+.text-white a,
+.text-white a:visited,
+.background-purple a,
+.background-purple a:visited {
+	color: var(--orange-light);
+}
+
+.text-white a:active,
+.text-white a:focus,
+.text-white a:hover,
+.background-purple a:active,
+.background-purple a:focus,
+.background-purple a:hover  {
+	color: var(--orange-pale);
+}
+
+.text-white .button,
+.text-white .button:visited,
+.background-purple .button:not(.button-cta),
+.background-purple .button:not(.button-cta):visited  {
+    color: var(--base-white);
+}
+
+.text-white .button:active,
+.text-white .button:focus,
+.text-white .button:hover,
+.background-purple .button:active,
+.background-purple .button:focus,
+.background-purple .button:hover {
+	border-color: var(--orange-medium);
+	color: transparent;
+}
+
+.text-white .button:hover:after,
+.background-purple .button:hover:after {
+	color: var(--orange-medium);
+}
+
+/* Superfooter: CTA
+--------------------------------------------- */
+.housing-superfooter-cta-container {
+    background-color: var(--base-purple);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+
+.housing-superfooter-content h2 {
+    color: var(--orange-light);
+    font-family: var(--font-jakarta);
+    font-size: 4.5rem;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    text-transform: none;
+}
+
+.housing-superfooter-content h2 strong {
+    color: var(--base-white);
+    font-weight: 300;
+}
+
+.housing-superfooter-content h3 {
+    color: var(--orange-pale);
+    font-family: var(--font-prompt);
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: 1.12px;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 1200px) {
+    .housing-superfooter-content h2 {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .housing-superfooter-content h2 {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .housing-superfooter-content h2 {
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .housing-superfooter-content h2 {
+        font-size: 3rem;
+    }
+
+    .housing-superfooter-content h3 { 
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .housing-superfooter-content h2 {
+        font-size: 2rem;
+    }
+
+    .housing-superfooter-content h3 { 
+        font-size: 1.25rem;
+    }
+}
+
+/* Superfooter: navigation
+--------------------------------------------- */
+.superfooter-nav-container {
+    background: var(--orange-pale);
+}
+
+.superfooter-nav-item {
+    background: var(--orange-medium);
+}
+
+.superfooter-nav-item:hover {
+    background: var(--orange-light);
+}
+
+/* Custom Classes for Unique Elements
+--------------------------------------------- */
+.home-endorsements {
+    -webkit-box-shadow: inset 0px 350px 0px 0px rgba(255,255,255,1);
+    -moz-box-shadow: inset 0px 350px 0px 0px rgba(255,255,255,1);
+    box-shadow: inset 0px 350px 0px 0px rgba(255,255,255,1);
+}
+
+.home-endorsements .endorsements-cta {
+    padding-bottom: 0;
+}
