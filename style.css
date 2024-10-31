@@ -65,6 +65,20 @@
 	color: var(--orange-medium);
 }
 
+/* Site Footer Links
+--------------------------------------------- */
+.site-footer a,
+.site-footer a:visited {
+    color: var(--base-white);
+}
+
+.site-footer a:active,
+.site-footer a:focus,
+.site-footer a:hover {
+    color: var(--orange-light);
+    text-decoration: none;
+}
+
 /* Superfooter: CTA
 --------------------------------------------- */
 .housing-superfooter-cta-container {
