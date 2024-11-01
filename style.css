@@ -31,6 +31,12 @@ body.home {
     background: var(--base-white);
 }
 
+h3,
+.special-headlines h3,
+.alt-headlines h3 {
+    color: var(--base-black);
+}
+
 @media screen and (max-width: 640px) {
     .section-intro p {
         width: 100%;
@@ -193,7 +199,12 @@ body.home {
     background-repeat: no-repeat;
     padding-top: 140px;
     padding-bottom: 140px;
+    /* margin-top: 100px; */
 }
+/* 
+.home .housing-superfooter-cta-container {
+    margin-top: 0;
+} */
 
 .housing-superfooter-content h2 {
     color: var(--orange-light);
@@ -279,14 +290,14 @@ body.home {
     color: var(--orange-dark);
 }
 
-.endorsements-slider .owl-next circle, 
-.endorsements-slider .owl-prev circle {
-    fill: var(--orange-medium);
+.owl-next circle, 
+.owl-prev circle {
+    fill: var(--orange-medium) !important;
 }
 
-.endorsements-slider .owl-next:hover circle, 
-.endorsements-slider .owl-prev:hover circle {
-    fill: var(--orange-dark);
+.owl-next:hover circle, 
+.owl-prev:hover circle {
+    fill: var(--orange-dark) !important;
 }
 
 .endorsement-card .category {
@@ -1089,5 +1100,36 @@ body.home {
 
     .border-top-thin-purple .column-content {
         padding-top: 0;
+    }
+}
+
+/*--------------------------------------------------------------
+# Interior Hero
+--------------------------------------------------------------*/
+.page-hero-image {
+    flex-basis: 60%;
+    position: relative;
+}
+
+.page-hero-image:before {
+    background-image: url('/wp-content/themes/newman-housing/assets/housing-interior-hero-mask.png');
+    background-position: top right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+    width: 170px;
+}
+
+@media screen and (max-width: 800px) {
+    .page-hero-image:before {
+        width: 130px;
+    }
+
+    .page-hero-content {
+        padding: 20px 10px 20px 20px;
     }
 }
