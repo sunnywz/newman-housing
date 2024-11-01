@@ -43,13 +43,58 @@
 	color: var(--orange-pale);
 }
 
-.text-white .button,
-.text-white .button:visited,
-.background-purple .button:not(.button-cta),
-.background-purple .button:not(.button-cta):visited  {
+/* Standard Button */
+.button,
+.button:visited {
+	border: 2px solid var(--base-purple);
+}
+
+.button:active,
+.button:focus,
+.button:hover {
+	border-color: var(--orange-medium);
+}
+
+.button::before {
+    color: var(--base-purple);
+}
+
+.button::after {
+    color: var(--orange-medium);
+}
+
+/* white background button */
+.button.button-white,
+.button.button-white:visited {
+	background: var(--base-purple);
+	border: 2px solid var(--base-purple);
+}
+
+.button.button-white:active,
+.button.button-white:focus,
+.button.button-white:hover {
+	background: var(--orange-light);
+	border-color: var(--orange-light);
+}
+
+.button.button-white::before {
     color: var(--base-white);
 }
 
+.button.button-white:active::before,
+.button.button-white:focus::before {
+	color: var(--base-purple);
+}
+
+.button.button-white:hover::before {
+	color: var(--base-purple);
+}
+
+.button.button-white::after {
+    color: var(--base-white);
+}
+
+/* dark mode buttons */
 .text-white .button:active,
 .text-white .button:focus,
 .text-white .button:hover,
@@ -57,12 +102,11 @@
 .background-purple .button:focus,
 .background-purple .button:hover {
 	border-color: var(--orange-medium);
-	color: transparent;
 }
 
-.text-white .button:hover:after,
-.background-purple .button:hover:after {
-	color: var(--orange-medium);
+.text-white .button::after,
+.background-purple .button::after {
+    color: var(--orange-medium);
 }
 
 /* Site Footer Links
@@ -168,7 +212,27 @@
     background: var(--orange-light);
 }
 
-/* Custom Classes for Unique Elements
+/* Endorsements Slider
+--------------------------------------------- */
+.endorsement-byline1 {
+    color: var(--orange-dark);
+}
+
+.endorsements-slider .owl-next circle, 
+.endorsements-slider .owl-prev circle {
+    fill: var(--orange-medium);
+}
+
+.endorsements-slider .owl-next:hover circle, 
+.endorsements-slider .owl-prev:hover circle {
+    fill: var(--orange-dark);
+}
+
+.endorsement-card .category {
+    color: var(--base-purple3);
+}
+
+/* Custom Class: Endorsements on Home Page
 --------------------------------------------- */
 .home-endorsements {
     -webkit-box-shadow: inset 0px 350px 0px 0px rgba(255,255,255,1);
@@ -178,4 +242,230 @@
 
 .home-endorsements .endorsements-cta {
     padding-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Home Hero
+--------------------------------------------------------------*/
+/* hero basics */
+.block-home-hero {
+	background: var(--base-purple);
+	overflow: hidden;
+	padding-bottom: 150px;
+	position: relative;
+}
+
+.block-home-hero .owl-carousel .owl-stage-outer {
+	overflow: visible;
+}
+
+.block-home-hero .owl-stage {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+}
+
+.block-home-hero .owl-stage .owl-item {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    height: auto !important;
+}
+
+.home-hero-slide {
+    align-items: stretch;
+    display: flex;
+	-ms-flex-preferred-size: 100%;
+	    flex-basis: 100%;
+	height: 600px;
+    justify-content: space-between;
+}
+
+.block-home-hero .owl-dots {
+	margin-top: -75px;
+	position: relative;
+}
+
+.block-home-hero .owl-dot span {
+	background: var(--base-white);
+}
+
+.block-home-hero .owl-dot.active span {
+	background: var(--base-purple);
+}
+
+@media screen and (max-width: 1024px) {
+	.block-home-hero {
+		padding-bottom: 100px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.block-home-hero {
+		padding-bottom: 48px;
+	}
+
+	.home-hero-slide {
+		height: auto;
+		min-height: 500px;
+	}
+
+	.block-home-hero .owl-dots {
+		margin-left: 15px;
+		text-align: left;
+	}
+}
+
+/* hero content */
+.home-hero-slide-content {
+    flex-basis: 60%;
+	padding: 50px 100px 0 calc(50vw - 585px);
+}
+
+.home-hero-headline {
+	color: var(--base-purple);
+	font-family: var(--font-jakarta);
+	font-size: 3.375rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.07;
+	margin-bottom: 2rem;
+    max-width: 100%;
+	text-transform: none;
+    width: 550px;
+}
+
+.home-hero-subhead {
+	color: var(--base-purple);
+	font-family: var(--font-jakarta);
+	font-size: 1.25rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 1.6;
+	margin-bottom: 2rem;
+	max-width: 100%;
+	padding-left: 40px;
+	width: 500px;
+}
+
+.home-hero-cta {
+	padding-left: 40px;
+}
+
+@media screen and (max-width: 1200px) {
+	.home-hero-slide-content {
+		padding: 100px 100px 0 15px;
+	}
+
+	.home-hero-headline { 
+		font-size: 2.75rem;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.home-hero-headline { 
+		font-size: 2.25rem;
+	}
+	.home-hero-subhead {
+		font-size: 1rem;
+	}
+
+	.home-hero-subhead,
+	.home-hero-cta {
+		padding-left: 0;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.home-hero-slide-content {
+		padding: 75px 15px 50px 15px;
+		width: 100%;
+	}
+
+	.home-hero-subhead {
+		width: auto;
+	}
+}
+
+/* hero image */
+.home-hero-slide-image {
+    flex-basis: 40%;
+}
+
+.home-hero-image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    height: 100%;
+    margin-top: 70px;
+    position: relative;
+    transition: background-size 7s ease-in-out; 
+}
+
+.home-hero-image.zoom-effect {
+    background-size: 110% auto; 
+    transition: background-size 7s ease-in-out; 
+}
+
+/* hero slide custom colors */
+.home-hero-slide {
+	background: var(--orange-pale);
+	position: relative;
+}
+
+.home-hero-slide-1 {
+	background: var(--base-gray3);
+}
+
+/*--------------------------------------------------------------
+# Home Hero Footer / Quote
+--------------------------------------------------------------*/
+.home-page-quote {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-quote-icon {
+    flex-basis: 250px;
+}
+
+.home-quote-icon + .home-quote-content {
+    flex-basis: calc(100% - 250px);
+    padding-left: 30px;
+}
+
+.home-quote-content p {
+    font-size: 1.375rem;
+    padding-left: 40px;
+}
+
+.home-quote-line {
+    position: relative;
+}
+
+.home-quote-line:before,
+.home-quote-line:after {
+    color: var(--orange-light);
+    font-size: 4.25rem;
+    font-weight: 700;
+    position: absolute;
+}
+
+.home-quote-line:before {
+    content: "“";
+    top: -1.25rem;
+    left: 0;
+}
+
+.home-quote-line:after {
+    content: "”";
+    margin-top: -1.25rem;
+}
+
+.home-quote-byline {
+    color: var(--orange-light);
+    font-weight: 700;
 }

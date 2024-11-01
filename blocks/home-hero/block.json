@@ -1,0 +1,27 @@
+{
+    "name": "acf/home-hero",
+    "title": "Home Page Hero",
+    "description": "",
+    "icon": "slides",
+    "apiVersion": 2,
+    "keywords": [],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "blocks/home-hero/block-home-hero.php"
+    },
+    "styles": [],
+    "supports": {
+        "align": false,
+        "anchor": true,
+        "alignContent": false,
+        "color": {
+            "text": false,
+            "background": false,
+            "link": false
+        },
+        "alignText": false,
+        "fullHeight": false
+    },
+    "attributes": {
+    }
+}
