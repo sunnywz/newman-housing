@@ -1,0 +1,27 @@
+{
+    "name": "acf/home-about",
+    "title": "Home Page About",
+    "description": "",
+    "icon": "media-document",
+    "apiVersion": 2,
+    "keywords": [],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "blocks/home-about/block-home-about.php"
+    },
+    "styles": [],
+    "supports": {
+        "align": false,
+        "anchor": true,
+        "alignContent": false,
+        "color": {
+            "text": false,
+            "background": false,
+            "link": false
+        },
+        "alignText": false,
+        "fullHeight": false
+    },
+    "attributes": {
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "name": "acf/home-cards",
+    "title": "Home Preview Cards",
+    "description": "",
+    "icon": "excerpt-view",
+    "apiVersion": 2,
+    "keywords": [],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "blocks/home-cards/block-home-cards.php"
+    },
+    "styles": [],
+    "supports": {
+        "align": false,
+        "anchor": true,
+        "alignContent": false,
+        "color": {
+            "text": false,
+            "background": false,
+            "link": false
+        },
+        "alignText": false,
+        "fullHeight": false
+    },
+    "attributes": {
+    }
+}
