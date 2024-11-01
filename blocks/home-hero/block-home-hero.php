@@ -67,7 +67,9 @@ if ( ! empty( $block['className'] ) ) {
                     $hph_image = get_sub_field( 'hph_image' ); 
                     if ( $hph_image ) : ?>
                         <div class="home-hero-slide-image">
-                            <div class="home-hero-image" style="background-image: url(<?php echo esc_url( $hph_image['url'] ); ?>)"></div>
+                            <div class="home-hero-image" style="background-image: url(<?php echo esc_url( $hph_image['url'] ); ?>)">
+                                <img src="<?php echo esc_url( $hph_image['url'] ); ?>" style="visibility: hidden" >
+                            </div>
                         </div>
                     <?php 
                     endif; ?>
@@ -81,7 +83,7 @@ if ( ! empty( $block['className'] ) ) {
 
 <?php 
 if ( have_rows( 'hphfq' ) ) : ?>
-    <section class="home-page-quote-container block-spacing-standard block-spacing-top-none background-purple text-white">
+    <section class="home-page-quote-container background-purple text-white">
         <div class="inner">
             <?php 
             while ( have_rows( 'hphfq' ) ) : the_row(); ?>

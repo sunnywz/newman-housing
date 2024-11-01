@@ -43,7 +43,8 @@ add_filter('acf/settings/load_json', function ($paths) {
  */
 function newman_housing_load_blocks() {
     register_block_type( get_stylesheet_directory() . '/blocks/home-hero/block.json' );
-    // register_block_type( get_stylesheet_directory() . '/blocks/home-about/block.json' );
+    register_block_type( get_stylesheet_directory() . '/blocks/home-about/block.json' );
+    register_block_type( get_stylesheet_directory() . '/blocks/home-cards/block.json' );
 }
 add_action( 'init', 'newman_housing_load_blocks' );
 
@@ -54,6 +55,7 @@ function newman_housing_allowed_block_types($allowed_blocks, $editor_context) {
     $acf_blocks = [
         'acf/home-hero',
         'acf/home-about',
+        'acf/home-cards',
         'acf/cards-stats',
         'acf/columns-content',
         'acf/single-content',
